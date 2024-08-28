@@ -42,24 +42,24 @@ int main(){
     return 0;
 }
 
-// int seive(int n){
-//     vector<bool> primes(n+1, true);
-//     primes[0] = primes[1] = false;
-//     for(int p = 2; p * p <= n; p++){
-//         if(primes[p]){
-//             for(int i = p * p; i <= n; i += p){
-//                 primes[i] = false;
-//             }
-//         }
-//     }
-//     int count = 0;
-//     for(int i = 2; i <= n; i++){
-//         if(primes[i]){
-//             cout << i << " ";
-//             count++;
-//         }
-//     }
-//     cout << endl;
-//     return count;
-// }
+int seive(int n){
+    vector<bool> primes(n+1, true);
+    primes[0] = primes[1] = false;
+    for(int p = 2; p * p <= n; p++){
+        if(primes[p]){
+            for(int i = p * p; i <= n; i += p){
+                primes[i] = false;
+            }
+        }
+    }
+    int count = 0;
+    for(int i = 2; i <= n; i++){
+        if(primes[i]){
+            cout << i << " ";
+            count++;
+        }
+    }
+    cout << endl;
+    return count;
+}
 
