@@ -11,7 +11,7 @@ int main(){
     int result = search(arr, x, n);
     cout << "The index of the desired element is: " << result << endl;
     return 0;
-}
+}//nice
 
 int search(int arr[], int x, int n){
     int low = 0, high = n-1;
